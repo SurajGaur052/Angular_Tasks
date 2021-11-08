@@ -4,25 +4,29 @@
       "empName": "Joey",
       "empId": "102",
       "sal": "25000",
-      "job": "SE"
+      "job": "SE",
+	  "Deptno":"1011"
     },
     {
       "empName": "Ross",
       "empId": "101",
       "sal": "20000",
-      "job": "SD1"
+      "job": "SD1",
+	  "Deptno":"1012"
     },
     {
       "empName": "Monica",
       "empId": "103",
       "sal": "50000",
-      "job": "HR"
+      "job": "HR",
+	  "Deptno":"1013"
     },
     {
       "empName": "Chandler",
       "empId": "104",
       "sal": "40000",
-      "job": "TL"
+      "job": "TL",
+	  "Deptno":"1014"
     }
   ]
 }
