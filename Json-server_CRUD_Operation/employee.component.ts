@@ -13,6 +13,7 @@ export class EmployeeComponent {
   empName:string="";
   job:string="";
   sal:number=0;
+  Deptno:number=0;
 
   url:string="http://localhost:3000/emps"
      
@@ -21,9 +22,7 @@ export class EmployeeComponent {
      
 
      constructor(private httpObj:HttpClient)
-     {
-
-      }
+     {}
 
      btn_Get_Emp(): void
      {
@@ -42,6 +41,7 @@ export class EmployeeComponent {
           this.empName=empObj.empName;
           this.sal=empObj.sal;
           this.job=empObj.job;
+          this.Deptno=empObj.Deptno;
           this.isDisabled=true;
        });
      }
@@ -53,6 +53,7 @@ export class EmployeeComponent {
       empObj.empName = this.empName;
       empObj.sal = this.sal;
       empObj.job=this.job;
+      empObj.Deptno=this.Deptno;
   
       this.httpObj.post<any>(this.url,  empObj).subscribe( (response:any) =>{
         alert("New employee details are added to server.");
@@ -69,6 +70,7 @@ export class EmployeeComponent {
       empObj.empName = this.empName;
       empObj.sal = this.sal;
       empObj.job=this.job;
+      empObj.Deptno=this.Deptno;
   
       this.httpObj.put<any>(this.url + "/" +  empObj.empId,  empObj).subscribe( (response:any) =>{
         alert("Employee details are updated to server.");
@@ -92,6 +94,8 @@ export class EmployeeComponent {
        this.empName="";
        this.sal=0;
        this.job="";
+       this.Deptno=0;
+
      }
 
 }
@@ -101,5 +105,6 @@ class Employee{
   empId:number=0;
   sal:number=0;
   job:string="";
+  Deptno:number=0;
 }
 
