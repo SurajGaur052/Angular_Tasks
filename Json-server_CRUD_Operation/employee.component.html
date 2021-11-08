@@ -25,6 +25,7 @@
 <input type="text"  [(ngModel)]="empName"  placeholder="EmpName"  />
 <input type="text"  [(ngModel)]="job"  placeholder="job"  />
 <input type="text"  [(ngModel)]="sal"  placeholder="salary"  />
+<input type="text"  [(ngModel)]="Deptno"  placeholder="Deptno"  />
 <hr/>
 
 <input type="button" value="Get Emp" (click)="btn_Get_Emp()">
@@ -37,12 +38,14 @@
     <th>Emp Name</th>
     <th>Salary</th>
     <th>Job</th>
+    <th>Dept No</th>
   </tr>
   <tr *ngFor="let item of empsArray">
     <td>{{item.empId}}</td>
     <td>{{item.empName}}</td>
     <td>{{item.sal}}</td>
     <td>{{item.job}}</td>
+    <td>{{item.Deptno}}</td>
     <td>
       <a href="javascript:void(0)" (click)="delete_click(item.empId)">Delete</a>|
       <a href="javascript:void(0)" (click)="select_click(item.empId)">Select</a>
