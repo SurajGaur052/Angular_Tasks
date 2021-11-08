@@ -1,0 +1,56 @@
+
+<h3>CRUD Operations on  Server Data (json-server as backend)</h3>
+<hr/>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d89d9d;
+  }
+</style>
+
+<body>
+
+<input type="text" [disabled]="isDisabled"  [(ngModel)]="empId"  placeholder="EmpId"  />
+<input type="text"  [(ngModel)]="empName"  placeholder="EmpName"  />
+<input type="text"  [(ngModel)]="job"  placeholder="job"  />
+<input type="text"  [(ngModel)]="sal"  placeholder="salary"  />
+<hr/>
+
+<input type="button" value="Get Emp" (click)="btn_Get_Emp()">
+<input type="button"  value="Add Emp" (click)="btn_Add_Emp()"  />
+<input type="button" value="Update" (click)="btn_Update_Emp()">
+
+<table border="5" cellpadding=8 cellspacing=0>
+  <tr>
+    <th>Emp ID</th>
+    <th>Emp Name</th>
+    <th>Salary</th>
+    <th>Job</th>
+  </tr>
+  <tr *ngFor="let item of empsArray">
+    <td>{{item.empId}}</td>
+    <td>{{item.empName}}</td>
+    <td>{{item.sal}}</td>
+    <td>{{item.job}}</td>
+    <td>
+      <a href="javascript:void(0)" (click)="delete_click(item.empId)">Delete</a>|
+      <a href="javascript:void(0)" (click)="select_click(item.empId)">Select</a>
+  </td>
+  </tr>
+</table>
+
+</body>
+<hr>
+
+
