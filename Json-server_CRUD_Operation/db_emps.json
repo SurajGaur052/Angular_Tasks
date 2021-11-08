@@ -1,0 +1,28 @@
+{
+  "emps": [
+    {
+      "empName": "Joey",
+      "empId": "102",
+      "sal": "25000",
+      "job": "SE"
+    },
+    {
+      "empName": "Ross",
+      "empId": "101",
+      "sal": "20000",
+      "job": "SD1"
+    },
+    {
+      "empName": "Monica",
+      "empId": "103",
+      "sal": "50000",
+      "job": "HR"
+    },
+    {
+      "empName": "Chandler",
+      "empId": "104",
+      "sal": "40000",
+      "job": "TL"
+    }
+  ]
+}
